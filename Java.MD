@@ -121,12 +121,12 @@ Create a new profile file for Maven:
 ```
 sudo vi /etc/profile.d/maven.sh
 ```
-## Paste the following inside the /etc/profile.d/maven.sh
+## Paste the ENVS inside the file /etc/profile.d/maven.sh
 ```
 export M2_HOME=/opt/apache-maven
 export PATH=${M2_HOME}/bin:${PATH}
 ```
-## After applying the changes reload the file /etc/profile.d/maven.sh
+## After applying reload the changes 
 ```
 source /etc/profile.d/maven.sh
 ```
