@@ -24,7 +24,7 @@ The Backend service is responsible for adding the given values to the database. 
 
 ---
 
-### Install Java 8 (OpenJDK 1.8)
+## Installation steps of Java 8 (OpenJDK 1.8)
 
 By default, Java 8 is available via DNF on RHEL. Install it using:
 ```
