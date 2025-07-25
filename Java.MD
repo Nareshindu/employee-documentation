@@ -224,20 +224,20 @@ sudo dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-9-
 ## Disable the default PostgreSQL module  
 Prevents RHEL from installing the default older PostgreSQL version.
 ```
-sudo dnf -qy module disable postgresql`
+sudo dnf -qy module disable postgresql
 ```
 ---
 
 ### Install postgresql13 Client Only  
 Installs the psql command-line client without installing the database server.
 ```
-sudo dnf install -y postgresql13`
+sudo dnf install -y postgresql13
 ```
 ---
 
 ### Verify the client Installation
 ```
-psql --version`
+psql --version
 ```
 You should see something like:
 
@@ -247,6 +247,6 @@ You should see something like:
 
 ### To test the remote connection from backend server
 ```
-psql -h ip-addr -U username -d dbname`
+psql -h ip-addr -U username -d dbname
 ```
 ---
