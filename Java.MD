@@ -8,7 +8,7 @@
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Java 1.8**
 - **Spring Boot 2.6.3**
@@ -55,7 +55,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 ```
 ---
 
-### 🔄 Then Reload:
+## Then Reload:
 
 ```
 source ~/.bashrc 
@@ -66,7 +66,7 @@ source /etc/profile.d/java.sh
 ```
 ---
 
-## 🧰 Maven Installation
+## Maven Installation
 
 To build and run this project, you need to have **Apache Maven** installed on your system.
 
