@@ -64,6 +64,8 @@ source ~/.bashrc
 ```
 source /etc/profile.d/java.sh
 ```
+In which file you have added ENVS reload only that file
+
 ---
 
 ## Maven Installation
