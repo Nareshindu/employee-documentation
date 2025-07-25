@@ -48,7 +48,7 @@ sudo vi ~/.bash_profile
 sudo vi /etc/profile.d/java.sh
 ```
 ---
-Add the following lines:
+Add the ENVs to above any one file:
 ```
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
 export PATH=$JAVA_HOME/bin:$PATH
