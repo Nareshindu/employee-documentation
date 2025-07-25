@@ -87,10 +87,9 @@ To build and run this project, Apache Maven must be installed on your RHEL syste
 
 ---
 
-### Step-by-Step Installation (Manual)
+## Step-by-Step Installation (Manual)
 
-#### Download Apache Maven and check maven website for the latest version. (Optional)
- 
+## To download the latest version of Apache Maven checkout the below website (Optional)
 ```
 https://maven.apache.org/download.cgi
 ```
