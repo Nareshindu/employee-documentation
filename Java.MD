@@ -169,6 +169,7 @@ vi src/main/resources/application.properties
 ## change the Ip-address and if you want you can change username, password and database name also
 
 spring.datasource.url=jdbc:postgresql://localhost:5432/ptdb
+
 spring.datasource.username=employee
 spring.datasource.password=Admin@123
 
