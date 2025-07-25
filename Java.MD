@@ -1,0 +1,250 @@
+### Backend
+
+# EmployeeDetailsBoot - Java Spring Boot JSP Project
+
+## Project Overview
+
+**EmployeeDetailsBoot** is a Spring Boot-based Java web application designed to manage employee data using a PostgreSQL database and JSP (Java Server Pages) for the front-end view layer. It is packaged as a standalone **JAR** file with an embedded Tomcat server.
+
+---
+
+## 🛠️ Technologies Used
+
+- **Java 1.8**
+- **Spring Boot 2.6.3**
+- **Maven**
+- **PostgreSQL**
+- **Spring Data JPA**
+- **JSP (Tomcat Jasper)**
+- **JSTL**
+
+---
+
+The Backend service is responsible for adding the given values to the database. The Backend service is written in **Java**, so we need to install **Java 8** and **Apache Maven** for compiling and running the application.
+
+---
+
+### Install Java 8 (OpenJDK 1.8)
+
+By default, Java 8 is available via DNF on RHEL. Install it using:
+```
+dnf install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel
+```
+
+### Verify Java Installation:
+```
+java -version
+```
+---
+
+### Set JAVA_HOME Environment Variable:
+
+Add the below environment variables to `~/.bashrc` or `/etc/profile.d/java.sh`:
+```
+sudo vi ~/.bash_profile
+```
+# or
+```
+sudo vi /etc/profile.d/java.sh
+```
+---
+Add the following lines:
+```
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
+export PATH=$JAVA_HOME/bin:$PATH
+```
+---
+
+### 🔄 Then Reload:
+
+```
+source ~/.bashrc 
+```
+# or
+```
+source /etc/profile.d/java.sh
+```
+---
+
+## 🧰 Maven Installation
+
+To build and run this project, you need to have **Apache Maven** installed on your system.
+
+---
+
+### Prerequisites
+
+- **Java 1.8 or above**  
+- **Maven 3.6+** recommended
+
+---
+
+##  Step-by-Step Installation
+
+### Maven Installation on RHEL (Red Hat Enterprise Linux)
+
+To build and run this project, Apache Maven must be installed on your RHEL system.
+
+---
+
+### Step-by-Step Installation (Manual)
+
+#### Download Apache Maven
+
+Check https://maven.apache.org/download.cgi for the latest version. 
+
+## Change the directory
+```
+cd /opt
+```
+## Download the mvn zip file from internet using below command
+```
+sudo curl -O https://downloads.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
+```
+---
+
+### Extract the Archive
+```
+sudo tar -xvzf apache-maven-3.9.6-bin.tar.gz
+```
+## Rename the maven folder
+```
+sudo mv apache-maven-3.9.6 apache-maven
+```
+---
+
+## Set Up Environment Variables
+
+Create a new profile file for Maven:
+```
+sudo vi /etc/profile.d/maven.sh
+```
+## Paste the following inside the /etc/profile.d/maven.sh
+```
+export M2_HOME=/opt/apache-maven
+export PATH=${M2_HOME}/bin:${PATH}
+```
+## After applying the changes reload the file /etc/profile.d/maven.sh
+```
+source /etc/profile.d/maven.sh
+```
+---
+
+## Verify Maven Installation
+```
+mvn -version
+```
+
+## Expected output:
+
+Apache Maven 3.9.6
+Java version: 1.8.x
+
+---
+
+## directly we can install maven like java via YUM (Otional and second way to install maven)
+```
+sudo yum install maven
+```
+---
+
+## Create one Directory for project
+```
+mkdir /employee
+```
+## change the directory
+```
+cd /employee
+```
+## Download the application code to created app directory.
+```
+git clone https://github.com/Nareshindu/Employee-project-repo-mvn.git
+```
+## Do changes in application.properties change database ip-address 
+```
+vi src/main/resources/application.properties
+```
+## change the Ip-address and if you want you can change username, password and database name also
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/ptdb
+spring.datasource.username=employee
+spring.datasource.password=Admin@123
+
+## We need to setup a new service in systemd so systemctl can manage this service
+
+Setup SystemD Expense Backend Service
+```
+vim /etc/systemd/system/backend.service
+```
+```
+[Unit]
+Description=Java Backend Service
+After=network.target
+
+[Service]
+User=expense
+ExecStart=/usr/bin/java -jar /app/EmployeeDetailsBoot.jar
+SuccessExitStatus=143
+Restart=always
+RestartSec=5
+SyslogIdentifier=java-backend
+
+[Install]
+WantedBy=multi-user.target
+```
+## Load the service.
+```
+systemctl daemon-reload
+```
+## Enable the service.
+```
+systemctl enable backend
+```
+## Start the service
+```
+systemctl start backend
+```
+
+## Verification from backend server
+
+We can check data by using client package called PostgreSQL client or psql client.
+
+---
+
+### Add PostgreSQL YUM Repository  
+This enables access to PostgreSQL versions from the official PostgreSQL repo.
+```
+sudo dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-9-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+```
+
+---
+
+## Disable the default PostgreSQL module  
+Prevents RHEL from installing the default older PostgreSQL version.
+```
+sudo dnf -qy module disable postgresql`
+```
+---
+
+### Install postgresql13 Client Only  
+Installs the psql command-line client without installing the database server.
+```
+sudo dnf install -y postgresql13`
+```
+---
+
+### Verify the client Installation
+```
+psql --version`
+```
+You should see something like:
+
+`psql (PostgreSQL) 13.x`
+
+---
+
+### To test the remote connection from backend server
+```
+psql -h ip-addr -U username -d dbname`
+```
+---
