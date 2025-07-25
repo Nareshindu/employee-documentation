@@ -162,7 +162,7 @@ cd /employee
 ```
 git clone https://github.com/Nareshindu/Employee-project-repo-mvn.git
 ```
-## Do changes in application.properties change database ip-address 
+## Do changes in application.properties change the database ip-address 
 ```
 vi src/main/resources/application.properties
 ```
