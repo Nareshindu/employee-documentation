@@ -174,7 +174,7 @@ spring.datasource.password=Admin@123
 
 ## We need to setup a new service in systemd so systemctl can manage this service
 
-Setup SystemD Expense Backend Service
+Setup SystemD emplyee Backend Service
 ```
 vim /etc/systemd/system/backend.service
 ```
