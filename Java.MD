@@ -134,7 +134,7 @@ source /etc/profile.d/maven.sh
 
 ## Verify Maven Installation
 ```
-sudo mvn -version
+mvn -version
 ```
 
 ## Expected output:
@@ -160,8 +160,11 @@ sudo cd /employee
 ```
 ## Create employee user
 ```
-useradd employee
+sudo useradd employee
 ```
+## Change to project directory you can clone repo to /opt if you want seperate directory you can new add new directory and change it.
+
+sudo cd /employee
 
 ## Download the application code to created app directory.
 ```
