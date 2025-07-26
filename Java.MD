@@ -191,8 +191,10 @@ Description=Java Backend Service
 After=network.target
 
 [Service]
-User=employee
-ExecStart=/usr/bin/java -jar /app/EmployeeDetailsBoot.jar
+User=ec2-user
+Group=ec2-user
+WorkingDirectory=/opt/employee-code/Employee-project
+ExecStart=/usr/bin/java -jar /opt/employee-code/Employee-project/target/EmployeeDetailsBoot.jar
 SuccessExitStatus=143
 Restart=always
 RestartSec=5
