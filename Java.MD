@@ -139,8 +139,11 @@ mvn -version
 
 ## Expected output:
 
-Apache Maven 3.9.6
-Java version: 1.8.x
+Apache Maven x.x.x (bc0240f3c744dd6b6ec2920b3cd08dcc295161ae)
+Maven home: /opt/apache-maven
+Java version: 1.8.0_462, vendor: Red Hat, Inc., runtime: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.462.b08-3.el9.x86_64/jre
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "5.14.0-362.18.1.el9_3.x86_64", arch: "amd64", family: "unix"
 
 ---
 
@@ -163,7 +166,7 @@ cd /employee
 sudo useradd employee
 ``` -->
 
-## Download the application code to created app directory.
+## Download the application code to /opt directory.
 ```
 sudo git clone https://github.com/Nareshindu/employee-code.git
 ```
@@ -174,8 +177,8 @@ sudo vi /opt/employee-code/Employee-project/src/main/resources/application.prope
 ```
 ## change the Ip-address and if you want you can change username, password and database name also
 
-spring.datasource.url=jdbc:postgresql://localhost:5432/ptdb                                                            
-spring.datasource.username=employee                                                                                    
+spring.datasource.url=jdbc:postgresql://172.31.34.229:5432/ptdb                                                     
+spring.datasource.username=employee                                                                                 
 spring.datasource.password=Admin@123 
 
 ## Change the permission for project 
