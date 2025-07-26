@@ -50,19 +50,19 @@ sudo vi /etc/profile.d/java.sh
 ---
 Add the ENVs to above any one file:
 ```
-sudo export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
-sudo export PATH=$JAVA_HOME/bin:$PATH
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
+export PATH=$JAVA_HOME/bin:$PATH
 ```
 ---
 
 ## Then Reload:
 
 ```
-sudo source ~/.bashrc 
+source ~/.bashrc 
 ```
 # or
 ```
-sudo source /etc/profile.d/java.sh
+source /etc/profile.d/java.sh
 ```
 In which file you have added ENVS reload only that file
 
@@ -123,12 +123,12 @@ sudo vi /etc/profile.d/maven.sh
 ```
 ## Paste the ENVS inside the file /etc/profile.d/maven.sh
 ```
-sudo export M2_HOME=/opt/apache-maven
-sudo export PATH=${M2_HOME}/bin:${PATH}
+export M2_HOME=/opt/apache-maven
+export PATH=${M2_HOME}/bin:${PATH}
 ```
 ## After applying reload the changes 
 ```
-sudo source /etc/profile.d/maven.sh
+source /etc/profile.d/maven.sh
 ```
 ---
 
