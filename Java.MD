@@ -150,7 +150,7 @@ sudo yum install maven
 ```
 ---
 
-## Create one Directory for project
+<!-- ## Create one Directory for project
 ```
 sudo mkdir /employee
 ```
@@ -161,7 +161,7 @@ cd /employee
 ## Create employee user
 ```
 sudo useradd employee
-```
+``` -->
 
 ## Download the application code to created app directory.
 ```
@@ -170,14 +170,18 @@ sudo git clone https://github.com/Nareshindu/Employee-project-repo-mvn.git
 ## Do changes in application.properties change the database ip-address 
 
 ```
-sudo vi Employee-project-repo-mvn/EmployeeDetailsBoot_with_gitignore_classpath/src/main/resources/applicatio
-n.properties
+sudo vi /opt/employee-code/Employee-project/src/main/resources/application.properties
 ```
 ## change the Ip-address and if you want you can change username, password and database name also
 
 spring.datasource.url=jdbc:postgresql://localhost:5432/ptdb                                                            
 spring.datasource.username=employee                                                                                    
 spring.datasource.password=Admin@123 
+
+## Change the permission for project 
+```
+chown -R ec2-user:ec2-user /opt/employee-code
+```
 
 ## We need to setup a new service in systemd so systemctl can manage this service
 
