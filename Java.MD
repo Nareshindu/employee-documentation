@@ -222,7 +222,10 @@ sudo systemctl enable backend
 ```
 sudo systemctl start backend
 ```
-
+## Access this employee web-application on browser
+```
+http://18.234.229.147:8080/
+```
 ## Verification from backend server
 
 We can check data by using client package called PostgreSQL client or psql client.
