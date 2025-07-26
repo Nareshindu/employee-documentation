@@ -170,7 +170,8 @@ sudo git clone https://github.com/Nareshindu/Employee-project-repo-mvn.git
 ## Do changes in application.properties change the database ip-address 
 
 ```
-sudo vi src/main/resources/application.properties
+sudo vi Employee-project-repo-mvn/EmployeeDetailsBoot_with_gitignore_classpath/src/main/resources/applicatio
+n.properties
 ```
 ## change the Ip-address and if you want you can change username, password and database name also
 
@@ -182,7 +183,7 @@ spring.datasource.password=Admin@123
 
 Setup SystemD emplyee Backend Service
 ```
-vi /etc/systemd/system/backend.service
+sudo vi /etc/systemd/system/backend.service
 ```
 ```
 [Unit]
@@ -202,15 +203,15 @@ WantedBy=multi-user.target
 ```
 ## Load the service.
 ```
-systemctl daemon-reload
+sudo systemctl daemon-reload
 ```
 ## Enable the service.
 ```
-systemctl enable backend
+sudo systemctl enable backend
 ```
 ## Start the service
 ```
-systemctl start backend
+sudo systemctl start backend
 ```
 
 ## Verification from backend server
