@@ -28,12 +28,12 @@ The Backend service is responsible for adding the given values to the database. 
 
 By default, Java 8 is available via DNF on RHEL. Install it using:
 ```
-dnf install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel
+sudo dnf install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel
 ```
 
 ### Verify Java Installation:
 ```
-java -version
+sudo java -version
 ```
 ---
 
@@ -50,19 +50,19 @@ sudo vi /etc/profile.d/java.sh
 ---
 Add the ENVs to above any one file:
 ```
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
-export PATH=$JAVA_HOME/bin:$PATH
+sudo export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
+sudo export PATH=$JAVA_HOME/bin:$PATH
 ```
 ---
 
 ## Then Reload:
 
 ```
-source ~/.bashrc 
+sudo source ~/.bashrc 
 ```
 # or
 ```
-source /etc/profile.d/java.sh
+sudo source /etc/profile.d/java.sh
 ```
 In which file you have added ENVS reload only that file
 
@@ -97,11 +97,11 @@ https://maven.apache.org/download.cgi
 ```
 ## Change the directory
 ```
-cd /opt
+sudo cd /opt
 ```
 ## Download the mvn zip file from internet using below command
 ```
-sudo curl -O https://downloads.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
+sudo sudo curl -O https://downloads.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
 ```
 ---
 
@@ -123,18 +123,18 @@ sudo vi /etc/profile.d/maven.sh
 ```
 ## Paste the ENVS inside the file /etc/profile.d/maven.sh
 ```
-export M2_HOME=/opt/apache-maven
-export PATH=${M2_HOME}/bin:${PATH}
+sudo export M2_HOME=/opt/apache-maven
+sudo export PATH=${M2_HOME}/bin:${PATH}
 ```
 ## After applying reload the changes 
 ```
-source /etc/profile.d/maven.sh
+sudo source /etc/profile.d/maven.sh
 ```
 ---
 
 ## Verify Maven Installation
 ```
-mvn -version
+sudo mvn -version
 ```
 
 ## Expected output:
@@ -152,19 +152,24 @@ sudo yum install maven
 
 ## Create one Directory for project
 ```
-mkdir /employee
+sudo mkdir /employee
 ```
 ## change the directory
 ```
-cd /employee
+sudo cd /employee
 ```
+## Create employee user
+```
+useradd employee
+```
+
 ## Download the application code to created app directory.
 ```
-git clone https://github.com/Nareshindu/Employee-project-repo-mvn.git
+sudo git clone https://github.com/Nareshindu/Employee-project-repo-mvn.git
 ```
 ## Do changes in application.properties change the database ip-address 
 ```
-vi src/main/resources/application.properties
+sudo vi src/main/resources/application.properties
 ```
 ## change the Ip-address and if you want you can change username, password and database name also
 
@@ -176,7 +181,7 @@ spring.datasource.password=Admin@123
 
 Setup SystemD emplyee Backend Service
 ```
-vim /etc/systemd/system/backend.service
+vi /etc/systemd/system/backend.service
 ```
 ```
 [Unit]
@@ -184,7 +189,7 @@ Description=Java Backend Service
 After=network.target
 
 [Service]
-User=expense
+User=employee
 ExecStart=/usr/bin/java -jar /app/EmployeeDetailsBoot.jar
 SuccessExitStatus=143
 Restart=always
