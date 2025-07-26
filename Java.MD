@@ -182,7 +182,10 @@ spring.datasource.password=Admin@123
 ```
 chown -R ec2-user:ec2-user /opt/employee-code
 ```
-
+## To delete old target directory and build the package after deleting again
+```
+mvn clean install
+```
 ## We need to setup a new service in systemd so systemctl can manage this service
 
 Setup SystemD emplyee Backend Service
