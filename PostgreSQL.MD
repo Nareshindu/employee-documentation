@@ -162,20 +162,21 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT, INSERT, UPDATE, DELETE O
 
 ### To list the databases in the server:
 
-```\l```
-
----
+```
+\l
+```
 
 ### To connect the employee_details database:
 
-```\c employee_details```
-
----
+```
+\c employee_details
+```
 
 ### To list the tables in the employee_details database:
 
-```\dt```
-
+```
+\dt
+```
 ---
 
 ### You can see entries of a table using:
