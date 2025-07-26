@@ -156,15 +156,13 @@ sudo mkdir /employee
 ```
 ## change the directory
 ```
-sudo cd /employee
+cd /employee
 ```
 ## Create employee user
 ```
 sudo useradd employee
 ```
-## Change to project directory you can clone repo to /opt if you want seperate directory you can new add new directory and change it.
-```
-sudo cd /employee
+
 ```
 ## Download the application code to created app directory.
 ```
