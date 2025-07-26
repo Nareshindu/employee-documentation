@@ -163,9 +163,9 @@ sudo cd /employee
 sudo useradd employee
 ```
 ## Change to project directory you can clone repo to /opt if you want seperate directory you can new add new directory and change it.
-
+```
 sudo cd /employee
-
+```
 ## Download the application code to created app directory.
 ```
 sudo git clone https://github.com/Nareshindu/Employee-project-repo-mvn.git
