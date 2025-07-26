@@ -165,7 +165,7 @@ sudo useradd employee
 
 ## Download the application code to created app directory.
 ```
-sudo git clone https://github.com/Nareshindu/Employee-project-repo-mvn.git
+sudo git clone https://github.com/Nareshindu/employee-code.git
 ```
 ## Do changes in application.properties change the database ip-address 
 
