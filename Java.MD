@@ -55,7 +55,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 ```
 ---
 
-## Then Reload:
+## Reload after adding ENVs
 
 ```
 source ~/.bashrc 
