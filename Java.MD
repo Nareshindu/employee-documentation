@@ -101,7 +101,7 @@ sudo cd /opt
 ```
 ## Download the mvn zip file from internet using below command
 ```
-sudo sudo curl -O https://downloads.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
+sudo wget https://archive.apache.org/dist/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
 ```
 ---
 
