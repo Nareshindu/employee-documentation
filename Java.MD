@@ -37,7 +37,7 @@ sudo java -version
 ```
 ---
 
-### Set JAVA_HOME Environment Variable:
+### Set JAVA_HOME Environment Variables:
 
 Add the below environment variables to `~/.bashrc` or `/etc/profile.d/java.sh`:
 ```
