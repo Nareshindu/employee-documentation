@@ -1,4 +1,4 @@
-# PostgreSQL 13 or Higher Versions Installation Documentation
+### PostgreSQL 13 Installation & Configuration Guide (RHEL 9)
 
 Developer has chosen the database PostgreSQL. Hence, we are trying to install it up and configure it.
 
@@ -6,7 +6,7 @@ Versions of the DB Software you will get context from the developer, Meaning we 
 
 ---
 
-# PostgreSQL 13 Installation & Setup Guide on RHEL 9
+### PostgreSQL 13 Installation & Setup Guide on RHEL 9
 
 This guide helps you install and configure PostgreSQL 13 on a RHEL-based system (RHEL 9, CentOS Stream 9, Rocky Linux 9, AlmaLinux 9). And you can change this commands as per your distribution or Operating System.
 
