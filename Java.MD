@@ -55,7 +55,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 ```
 ---
 
-## Reload after adding ENVs
+## Reload the file after adding ENVs
 
 ```
 source ~/.bashrc 
@@ -97,7 +97,7 @@ https://maven.apache.org/download.cgi
 ```
 ## Change the directory
 ```
-sudo cd /opt
+cd /opt
 ```
 ## Download the mvn zip file from internet using below command
 ```
