@@ -232,7 +232,13 @@ sudo systemctl enable backend
 ```
 sudo systemctl start backend
 ```
+## To check the status of a service
+```
+sudo systemctl status backend
+```
+
 ## Access this employee web-application on browser
+**Note**: If you are using Ec2 instances open your public-ip on internet 
 ```
 http://18.234.229.147:8080/
 ```
