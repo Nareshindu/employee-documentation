@@ -183,7 +183,7 @@ sudo vi /opt/employee-code/Employee-project/src/main/resources/application.prope
 ```
 ## change the Ip-address and if you want you can change username, password and database name also
 
-**Note:**Edit these lines to match your database config:
+Note: Edit these lines to match your database config:
 
 
 spring.datasource.url=jdbc:postgresql://172.31.34.229:5432/ptdb                                                     
