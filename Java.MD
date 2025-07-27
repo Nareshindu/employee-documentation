@@ -31,7 +31,7 @@ By default, Java 8 is available via DNF on RHEL. Install it using:
 sudo dnf install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel
 ```
 
-### Verify Java Installation:
+## Verify Java Installation:
 ```
 sudo java -version
 ```
@@ -55,7 +55,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 ```
 ---
 
-## Reload the file after adding ENVs
+## Reload the file after adding envs
 
 ```
 source ~/.bashrc 
@@ -68,13 +68,13 @@ In which file you have added ENVS reload only that file
 
 ---
 
-## Maven Installation
+## Maven Installation 
 
 To build and run this project, you need to have **Apache Maven** installed on your system.
 
 ---
 
-### Prerequisites
+## Prerequisites
 
 - **Java 1.8 or above**  
 - **Maven 3.6+** recommended
@@ -83,7 +83,7 @@ To build and run this project, you need to have **Apache Maven** installed on yo
 
 ##  Step-by-Step Installation
 
-### Maven Installation on RHEL (Red Hat Enterprise Linux)
+## Maven Installation on RHEL (Red Hat Enterprise Linux)
 
 To build and run this project, Apache Maven must be installed on your RHEL system.
 
@@ -99,7 +99,7 @@ https://maven.apache.org/download.cgi
 ```
 cd /opt
 ```
-## Download the mvn zip file from internet using below command
+### Download the mvn zip file from internet using below command
 ```
 sudo wget https://archive.apache.org/dist/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
 ```
@@ -148,7 +148,7 @@ OS name: "linux", version: "5.14.0-362.18.1.el9_3.x86_64", arch: "amd64", family
 
 ---
 
-## directly we can install maven like java via YUM (Otional and second way to install maven)
+## Install Maven via Yum like java (Otional and second way to install maven)
 ```
 sudo yum install maven
 ```
@@ -176,21 +176,21 @@ sudo git clone https://github.com/Nareshindu/employee-code.git
 ```
 sudo chown -R ec2-user:ec2-user /opt/employee-code
 ```
-## Do changes in application.properties change the database ip-address 
+## Do changes in application.properties change the database IP address 
 
 ```
 sudo vi /opt/employee-code/Employee-project/src/main/resources/application.properties
 ```
-## change the Ip-address and if you want you can change username, password and database name also
+## change the IP address and if you want you can change username, password and database name also
 
 Note: Edit these lines to match your database config:
 
 
-spring.datasource.url=jdbc:postgresql://172.31.34.229:5432/ptdb  (Database Server Ip-address):5432/employee_details       
+spring.datasource.url=jdbc:postgresql://172.31.34.229:5432/ptdb  (Database Server IP address):5432/employee_details       
 spring.datasource.username=employee                              (Employee_details Database Username)  
 spring.datasource.password=Admin@123                             (Employee_details Database Password)
 
-## After changing the Database Ip-address you should build code you will change path where pom.xml file is located in this project under below path pom.xml file is there
+## After changing the Database IP address you should build code you will change path where pom.xml file is located in this project under below path pom.xml file is there
 ```
 cd /opt/employee-code/Employee-project
 ```
