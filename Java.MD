@@ -116,6 +116,7 @@ sudo mv apache-maven-3.9.6 apache-maven
 ---
 
 ## Set Up Environment Variables
+Adjust maven Environment Variables according to where you have installed the maven
 
 Create a new profile file for Maven:
 ```
@@ -183,7 +184,7 @@ spring.datasource.password=Admin@123
 
 ## Change the permission for project 
 ```
-chown -R ec2-user:ec2-user /opt/employee-code
+sudo chown -R ec2-user:ec2-user /opt/employee-code
 ```
 ## To delete old target directory and build the package after deleting again
 ```
