@@ -182,6 +182,6 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT, INSERT, UPDATE, DELETE O
 ### You can see entries of a table using:
 **Note**: After downloading code and run the project table will create automatically then you can see tables in database server
 ```
-SELECT * FROM table_name;
+SELECT * FROM employee_details;
 ```
 ---
