@@ -237,11 +237,12 @@ sudo systemctl start backend
 sudo systemctl status backend
 ```
 
-## Access this employee web-application on browser
-**Note**: If you are using Ec2 instances open your public-ip on internet 
-```
-http://18.234.229.147:8080/
-```
+## Access this employee web-application in a browser
+**Note:** If you are using an EC2 instance, open your instance's **public IP address** in the browser to access the application. 
+For example, if your public IP is `18.234.229.147`, 
+
+open: http://18.234.229.147:8080/
+
 ## Verification from backend server
 
 We can check data by using client package called PostgreSQL client or psql client.
