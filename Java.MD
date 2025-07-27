@@ -1,6 +1,6 @@
 ### Backend
 
-# EmployeeDetailsBoot - Java Spring Boot JSP Project
+# EmployeesRegistration Web-Application - Java Spring Boot JSP Project
 
 ## Project Overview
 
