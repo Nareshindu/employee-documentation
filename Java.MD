@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-**EmployeeDetailsBoot** is a Spring Boot-based Java web application designed to manage employee data using a PostgreSQL database and JSP (Java Server Pages) for the front-end view layer. It is packaged as a standalone **JAR** file with an embedded Tomcat server.
+**EmployeesRegistration Web-Application** is a Spring Boot-based Java web application designed to manage employee data using a PostgreSQL database and JSP (Java Server Pages) for the front-end view layer. It is packaged as a standalone **JAR** file with an embedded Tomcat server.
 
 ---
 
