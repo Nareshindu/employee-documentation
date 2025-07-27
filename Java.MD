@@ -288,4 +288,5 @@ You should see something like:
 ```
 psql -h ip-addr -U username -d dbname
 ```
+Example: psql -h 172.31.45.69 -U employee -d employee_details
 ---
