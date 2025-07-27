@@ -22,7 +22,7 @@ sudo dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-9-
 
 ---
 
-### Disable the Built-in PostgreSQL Module  
+### Disable the default PostgreSQL Module  
 It disables the default system PostgreSQL module that might conflict with version 13.
 ```
 sudo dnf -qy module disable postgresql
