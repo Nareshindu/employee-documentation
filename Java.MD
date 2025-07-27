@@ -186,9 +186,9 @@ sudo vi /opt/employee-code/Employee-project/src/main/resources/application.prope
 Note: Edit these lines to match your database config:
 
 
-spring.datasource.url=jdbc:postgresql://172.31.34.229:5432/ptdb                                                     
-spring.datasource.username=employee                                                                                 
-spring.datasource.password=Admin@123 
+spring.datasource.url=jdbc:postgresql://172.31.34.229:5432/ptdb  (Database Server Ip-address):5432/employee_details       
+spring.datasource.username=employee                              (Employee_details Database Username)  
+spring.datasource.password=Admin@123                             (Employee_details Database Password)
 
 ## After changing the Database Ip-address you should build code you will change path where pom.xml file is located in this project under below path pom.xml file is there
 ```
