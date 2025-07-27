@@ -116,7 +116,7 @@ sudo mv apache-maven-3.9.6 apache-maven
 ---
 
 ## Set Up Environment Variables
-Adjust maven Environment Variables according to where you have installed the maven
+**Note**: Adjust maven Environment Variables according to where you have installed the maven
 
 Create a new profile file for Maven:
 ```
@@ -171,6 +171,11 @@ sudo useradd employee
 ```
 sudo git clone https://github.com/Nareshindu/employee-code.git
 ```
+
+## Change the permission for project 
+```
+sudo chown -R ec2-user:ec2-user /opt/employee-code
+```
 ## Do changes in application.properties change the database ip-address 
 
 ```
@@ -182,10 +187,7 @@ spring.datasource.url=jdbc:postgresql://172.31.34.229:5432/ptdb
 spring.datasource.username=employee                                                                                 
 spring.datasource.password=Admin@123 
 
-## Change the permission for project 
-```
-sudo chown -R ec2-user:ec2-user /opt/employee-code
-```
+
 ## To delete old target directory and build the package after deleting again
 ```
 mvn clean install
